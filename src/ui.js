@@ -25,4 +25,11 @@ ui.createModalBoxes = function(anchordiv) {
   anchorSelector.insertAdjacentHTML('afterend', templates.modalBoxes());
 }
 
+ui.toggleActive = function(targetdiv) {
+  targetdiv = typeof targetdiv !== 'undefined' ? targetdiv : 'modalbox';
+
+  let element = document.getElementById(targetdiv);
+  element.classList.toggle('active');
+}
+
 export default ui;
