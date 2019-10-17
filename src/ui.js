@@ -25,11 +25,32 @@ ui.createModalBoxes = function(anchordiv) {
   anchorSelector.insertAdjacentHTML('afterend', templates.modalBoxes());
 }
 
-ui.toggleActive = function(targetdiv) {
-  targetdiv = typeof targetdiv !== 'undefined' ? targetdiv : 'modalbox';
+ui.toggleClass = function(targetdiv, toggleClassName) {
+  targetdiv = typeof targetdiv !== 'undefined' ? targetdiv : 'default';
+  toggleClassName = typeof toggleClassName !== 'undefined' ? toggleClassName : 'active';
 
   let element = document.getElementById(targetdiv);
-  element.classList.toggle('active');
+  element.classList.toggle(toggleClassName);
+}
+
+ui.addClass = function(targetdiv, customClassName) {
+  targetdiv = typeof targetdiv !== 'undefined' ? targetdiv : 'default';
+  customClassName = typeof customClassName !== 'undefined' ? customClassName : 'default';
+
+  let element, arr;
+  element = document.getElementById(targetdiv);
+  arr = element.className.split(" ");
+  if (arr.indexOf(customClassName) == -1) {
+    element.className += " " + customClassName;
+  }
+}
+
+ui.removeClass = function(targetdiv, customClassName) {
+  targetdiv = typeof targetdiv !== 'undefined' ? targetdiv : 'default';
+  customClassName = typeof customClassName !== 'undefined' ? customClassName : 'default';
+
+  var element = document.getElementById(targetdiv);
+  element.classList.remove(customClassName);
 }
 
 export default ui;
