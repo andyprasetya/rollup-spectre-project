@@ -8,7 +8,7 @@ ui.initUI = function(anchordiv) {
   ui.createTopNavigation(anchordiv);
   // Create modal divs (hidden)
   ui.createModalBoxes(anchordiv);
-
+  
 }
 
 ui.createTopNavigation = function(anchordiv) {

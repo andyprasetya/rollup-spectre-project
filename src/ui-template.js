@@ -1,7 +1,20 @@
 var templates = {};
 
 templates.topNavigation = function() {
-  let dom = ``;
+  let dom = `<div class='topnav' id='apptopnav'>
+      <a href='./' class='h6 custom-navbar-brand'>Rollup Spectre Project</a>
+      <div class='topnav-left'>
+        <a href='#' class='active'><i class='fa fa-home'></i>&nbsp;Home</a>
+        <a href='#'><i class='fa fa-file'></i>&nbsp;Menu #1</a>
+        <a href='#'><i class='fa fa-map'></i>&nbsp;Menu #2</a>
+        <a href='#'><i class='fa fa-book'></i>&nbsp;Menu #3</a>
+      </div>
+      <div class='topnav-right'>
+        <a href='#'><i class='fa fa-cog'></i>&nbsp;Menu #4</a>
+        <a href='#'><i class='fa fa-lock'></i>&nbsp;Menu #5</a>
+      </div>
+      <a href='#apptopnav' class='bar-icon'><i class='fa fa-bars'></i></a>
+    </div>`;
   return dom;
 }
 
