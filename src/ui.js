@@ -8,7 +8,10 @@ ui.initUI = function(anchordiv) {
   ui.createTopNavigation(anchordiv);
   // Create modal divs (hidden)
   ui.createModalBoxes(anchordiv);
-  
+  // Activate top-navigation menus
+  ui._activateTopNavMenus();
+  // Create landing page's content
+  ui._createLandingPage();
 }
 
 ui.createTopNavigation = function(anchordiv) {
@@ -51,6 +54,14 @@ ui.removeClass = function(targetdiv, customClassName) {
 
   var element = document.getElementById(targetdiv);
   element.classList.remove(customClassName);
+}
+
+ui._activateTopNavMenus = function() {
+
+}
+
+ui._createLandingPage = function() {
+  console.log('A landing page is created.');
 }
 
 export default ui;

@@ -50,7 +50,7 @@
 @media screen and (max-width: 767px) {
   #apptopnav.topnav:target {position: relative;}
   #apptopnav.topnav:target .topnav-left, 
-  #apptopnav.topnav:target .topnav-right {display:block;}
+  #apptopnav.topnav:target .topnav-right {display:block;width:100%;}
   #apptopnav.topnav:target a.bar-icon {
     position: absolute;
     right: 0;
